@@ -17,4 +17,14 @@ describe('<TopNav/>', () => {
         })
         expect(callback).toHaveBeenCalled(); 
     })
+
+    it('should fire callback to generate aural update when user clicks state-of-game link', () => {
+        const callback = jest.fn(); 
+        const wrapper = shallow(<TopNav onGenerateAuralUpdate={callback}/>);
+        const link = wrapper.find('.status-link');
+        link.simulate('click', {
+            preventDefault() {}
+        })
+        expect(callback).toHaveBeenCalled();
+    })
 })
