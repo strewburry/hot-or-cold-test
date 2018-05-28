@@ -8,7 +8,7 @@ describe('<Feedback/>', () => {
         shallow(<Feedback />);
     })
 
-    it('renders feedback', () => {
+    it('should render feedback', () => {
         let testFeedback = 'This is some test feedback';
         let wrapper = shallow(<Feedback feedback={testFeedback}/>);
         expect(wrapper.contains(testFeedback)).toEqual(true);
